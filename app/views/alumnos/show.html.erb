@@ -1,0 +1,70 @@
+<h1>Alumno</h1>
+
+<ul class="list-group">
+  <li class="list-group-item">
+    <p>
+      <strong>Nombre:</strong>
+      <%= @alumno.nombre %>
+    </p>
+  </li>
+
+  <li class="list-group-item">
+    <p>
+      <strong>Apellido:</strong>
+      <%= @alumno.apellido %>
+    </p>
+  </li>
+
+  <li class="list-group-item">
+    <p>
+      <strong>Nº de cédula:</strong>
+      <%= @alumno.cedula %>
+    </p>
+  </li>
+
+  <li class="list-group-item">
+    <p>
+      <strong>Nº de telefono:</strong>
+      <%= @alumno.telefono %>
+    </p>
+  </li>
+
+  <li class="list-group-item">
+    <p>
+      <strong>E-mail:</strong>
+      <%= @alumno.correo %>
+    </p>
+  </li>
+
+  <li class="list-group-item">
+    <p>
+      <strong>Barrio:</strong>
+      <%= @alumno.barrio %>
+    </p>
+  </li>
+
+  <li class="list-group-item">
+    <p>
+      <strong>Ciudad:</strong>
+      <%= @alumno.ciudad %>
+    </p>
+  </li>
+
+  <li class="list-group-item">
+    <p>
+      <strong>Tipo de Alumno:</strong>
+      <%= @alumno.tpersona.tipo %>
+    </p>
+  </li>
+
+  <li class="list-group-item">
+    <p>
+      <strong>Carrera:</strong>
+      <%= @alumno.carrera.nombre %>
+    </p>
+  </li>
+</ul>
+
+  <button class="btn btn-warning" type="button">
+    <%= link_to 'Editar', edit_alumno_path(@alumno) %>
+  </button>

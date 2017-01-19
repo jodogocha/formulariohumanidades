@@ -1,0 +1,47 @@
+<h1>Alumnos</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Nº de cédula</th>
+      <th>Nº de telefono</th>
+      <th>E-mail</th>
+      <th>Barrio</th>
+      <th>Ciudad</th>
+      <th>Tipo de Alumno</th>
+      <th>Carrera</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @alumnos.each do |alumno| %>
+      <tr>
+        <td><%= alumno.nombre %></td>
+        <td><%= alumno.apellido %></td>
+        <td><%= alumno.cedula %></td>
+        <td><%= alumno.telefono %></td>
+        <td><%= alumno.correo %></td>
+        <td><%= alumno.barrio %></td>
+        <td><%= alumno.ciudad %></td>
+        <td><%= alumno.tpersona.tipo %></td>
+        <td><%= alumno.carrera.nombre %></td>
+        <td><button class="btn btn-info" type="button">
+          <%= link_to 'Mostrar', alumno %>
+        </button></td>
+        <td><button class="btn btn-warning" type="button">
+          <%= link_to 'Editar', edit_alumno_path(alumno) %></td>
+        </button>
+        <td><button class="btn btn-danger" type="button">
+          <%= link_to 'Borrar', alumno, method: :delete, data: { confirm: 'Estas seguro?' } %>
+        </button></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<a class="btn btn-primary" href="../alumnos/new">Nuevo Alumno</a>
